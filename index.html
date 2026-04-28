@@ -2,21 +2,21 @@
 <html lang="en">
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Custom Clearance Agent in Navi Mumbai | Avishkar Enterprises</title>
-
-<meta name="description" content="Fast and reliable custom clearance services near JNPT, Navi Mumbai. 1000+ shipments cleared. Call now.">
+<title>Avishkar Enterprises</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
+html{scroll-behavior:smooth;}
+
 body{
 margin:0;
 font-family:Inter,sans-serif;
-background:#f4f7fb;
+background:linear-gradient(180deg,#f3f6fb,#e9eef5);
 color:#1a1a1a;
 }
 
-/* NAV */
+/* NAVBAR */
 nav{
 position:fixed;
 top:0;
@@ -30,52 +30,49 @@ box-shadow:0 4px 20px rgba(0,0,0,0.05);
 z-index:1000;
 }
 
+/* LOGO */
 .logo{
 display:flex;
 align-items:center;
 gap:8px;
 }
 
-.logo img{height:34px;}
-
-.menu-btn{
-font-size:24px;
-cursor:pointer;
-display:none;
+.logo img{
+height:36px;
 }
 
-/* MOBILE MENU */
-.menu{
-position:fixed;
-top:0;
-right:-100%;
-width:70%;
-height:100%;
-background:white;
-padding:30px;
-transition:0.3s;
-box-shadow:-5px 0 20px rgba(0,0,0,0.1);
+.logo-text{
+line-height:1;
 }
 
-.menu a{
-display:block;
-margin:15px 0;
-text-decoration:none;
-color:#333;
-font-size:16px;
+.logo-text .top{
+color:#ef4444;
+font-weight:700;
+font-size:14px;
 }
 
-.menu.active{right:0;}
+.logo-text .bottom{
+color:#2d6a4f;
+font-size:11px;
+letter-spacing:1px;
+}
 
-/* DESKTOP LINKS */
+/* NAV LINKS */
 .nav-links{
 display:flex;
-gap:15px;
+gap:12px;
+flex-wrap:wrap;
 }
 
 .nav-links a{
 text-decoration:none;
 color:#374151;
+font-size:14px;
+}
+
+/* FIX FOR CUT ISSUE */
+section{
+scroll-margin-top:90px;
 }
 
 /* HERO */
@@ -83,20 +80,38 @@ color:#374151;
 display:flex;
 flex-wrap:wrap;
 align-items:center;
-padding:110px 20px 60px;
+padding:120px 20px 60px;
 max-width:1200px;
 margin:auto;
 gap:30px;
 }
 
-.hero-text{flex:1;}
-.hero-img{flex:1;}
+.hero-text{
+flex:1;
+min-width:280px;
+}
+
+.hero-text h1{
+font-size:34px;
+margin-bottom:10px;
+}
+
+.hero-text p{
+color:#6b7280;
+}
+
+.hero-img{
+flex:1;
+min-width:280px;
+}
 
 .hero-img img{
 width:100%;
 border-radius:12px;
+box-shadow:0 20px 50px rgba(0,0,0,0.1);
 }
 
+/* BUTTON */
 .btn{
 background:#2d6a4f;
 padding:12px 22px;
@@ -104,9 +119,11 @@ border-radius:8px;
 color:white;
 text-decoration:none;
 display:inline-block;
-margin-top:10px;
+margin-top:12px;
+font-weight:600;
 }
 
+/* SECTION */
 .section{
 padding:60px 20px;
 max-width:1100px;
@@ -114,12 +131,58 @@ margin:auto;
 text-align:center;
 }
 
+/* CARDS */
+.grid{
+display:grid;
+gap:20px;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+}
+
 .card{
 background:white;
 padding:20px;
+border-radius:12px;
+border:1px solid #e5e7eb;
+box-shadow:0 8px 20px rgba(0,0,0,0.05);
+}
+
+/* STATS */
+.stats{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:20px;
+}
+
+.stat{
+background:white;
+padding:15px 20px;
 border-radius:10px;
 box-shadow:0 5px 15px rgba(0,0,0,0.05);
-margin:10px;
+}
+
+/* CTA */
+.cta{
+background:linear-gradient(135deg,#2d6a4f,#40916c);
+color:white;
+padding:50px 20px;
+text-align:center;
+margin:40px 20px;
+border-radius:14px;
+}
+
+/* CONTACT */
+.contact{
+background:white;
+padding:50px 20px;
+text-align:center;
+}
+
+/* FOOTER */
+footer{
+text-align:center;
+padding:20px;
+color:#6b7280;
 }
 
 /* FLOAT BUTTONS */
@@ -132,7 +195,6 @@ color:white;
 padding:14px;
 border-radius:50%;
 text-decoration:none;
-font-size:18px;
 }
 
 .call{
@@ -144,53 +206,45 @@ color:white;
 padding:14px;
 border-radius:50%;
 text-decoration:none;
-font-size:18px;
-}
-
-/* MOBILE */
-@media(max-width:768px){
-.nav-links{display:none;}
-.menu-btn{display:block;}
 }
 </style>
 </head>
 
 <body>
 
-<!-- NAV -->
+<!-- NAVBAR -->
 <nav>
 
 <div class="logo">
-<img src="logo-text.png">
-<strong>AVISHKAR</strong>
+<img src="logo-text.png" onerror="this.style.display='none'">
+<div class="logo-text">
+<div class="top">AVISHKAR</div>
+<div class="bottom">ENTERPRISES</div>
+</div>
 </div>
 
 <div class="nav-links">
-<a href="#">Home</a>
+<a href="#home">Home</a>
 <a href="#services">Services</a>
 <a href="#contact">Contact</a>
 </div>
-
-<div class="menu-btn" onclick="toggleMenu()">☰</div>
 
 </nav>
 
-<!-- MOBILE MENU -->
-<div class="menu" id="menu">
-<a href="#">Home</a>
-<a href="#services">Services</a>
-<a href="#contact">Contact</a>
-</div>
-
 <!-- HERO -->
-<section class="hero">
+<section id="home" class="hero">
 
 <div class="hero-text">
-<h1>Custom Clearance Agent in Navi Mumbai</h1>
-<p>1000+ shipments cleared. Fast, compliant and reliable service near JNPT.</p>
+<h1>Fast & Reliable Custom Clearance — Without Delays</h1>
 
-<a href="#contact" class="btn">Get Quote</a>
-<a href="https://wa.me/919820499918?text=Hi%20I%20need%20custom%20clearance" class="btn" style="background:#25D366;">WhatsApp</a>
+<p>
+Avoid costly delays and compliance issues. We help importers & exporters clear shipments quickly and smoothly.
+</p>
+
+<a href="#contact" class="btn">Get a Quote</a><br>
+
+<a href="https://wa.me/919820499918?text=Hi%20Avishkar%20Enterprise,%20I%20need%20custom%20clearance%20support." 
+class="btn" style="background:#25D366;">Chat on WhatsApp</a>
 </div>
 
 <div class="hero-img">
@@ -199,36 +253,58 @@ font-size:18px;
 
 </section>
 
+<!-- STATS -->
+<section class="section">
+<h2>Proven Track Record</h2>
+
+<div class="stats">
+<div class="stat"><strong>1000+</strong><br>Shipments</div>
+<div class="stat"><strong>Since 2019</strong></div>
+<div class="stat"><strong>Pan India</strong></div>
+<div class="stat"><strong>5 Hours</strong><br>Fastest</div>
+</div>
+</section>
+
 <!-- SERVICES -->
 <section id="services" class="section">
 <h2>Our Services</h2>
 
+<div class="grid">
 <div class="card">Import Clearance</div>
 <div class="card">Export Clearance</div>
 <div class="card">Freight Forwarding</div>
+</div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+<h2>Need Fast Clearance?</h2>
+<p>Talk to us today</p>
+<a href="#contact" class="btn" style="background:white;color:#2d6a4f;">Contact Now</a>
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="section">
+<section id="contact" class="contact">
 <h2>Contact Us</h2>
 
-<p>Call or send details. We respond quickly.</p>
+<p>Call or WhatsApp us for fast response</p>
 
-<a href="tel:+919820499918" class="btn">📞 Call Now</a><br>
+<p><strong>📞 Phone:</strong> <a href="tel:+919820499918">+91 9820499918</a></p>
 
-<a href="https://wa.me/919820499918?text=Hi%20I%20need%20custom%20clearance" class="btn" style="background:#25D366;">💬 WhatsApp</a>
+<p><strong>💬 WhatsApp:</strong> 
+<a href="https://wa.me/919820499918?text=Hi%20Avishkar%20Enterprise,%20I%20need%20custom%20clearance%20support.">
+Chat Now</a></p>
 
+<p><strong>📍 Location:</strong> Navi Mumbai (Near JNPT)</p>
 </section>
 
-<!-- FLOAT -->
-<a href="https://wa.me/919820499918?text=Hi%20I%20need%20custom%20clearance" class="whatsapp">💬</a>
-<a href="tel:+919820499918" class="call">📞</a>
+<footer>
+© 2026 Avishkar Enterprises
+</footer>
 
-<script>
-function toggleMenu(){
-document.getElementById("menu").classList.toggle("active");
-}
-</script>
+<!-- FLOAT -->
+<a href="https://wa.me/919820499918?text=Hi%20Avishkar%20Enterprise,%20I%20need%20custom%20clearance%20support." class="whatsapp">💬</a>
+<a href="tel:+919820499918" class="call">📞</a>
 
 </body>
 </html>
