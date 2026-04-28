@@ -10,121 +10,117 @@
 body{
 margin:0;
 font-family:Inter,sans-serif;
-background:#0b1f2a;
-color:#fff;
+background:#ffffff;
+color:#1a1a1a;
 }
 
 /* NAV */
 nav{
-position:sticky;
+position:absolute;
 top:0;
-background:rgba(10,20,30,0.85);
-backdrop-filter:blur(10px);
+width:100%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:14px 20px;
-z-index:1000;
-border-bottom:1px solid rgba(255,255,255,0.1);
+padding:20px;
+color:white;
+z-index:10;
 }
 
 nav a{
-color:#ddd;
+color:white;
 text-decoration:none;
-margin-left:18px;
+margin-left:20px;
 font-weight:500;
 }
 
 /* HERO */
 .hero{
-padding:120px 20px;
+position:relative;
+height:90vh;
+display:flex;
+align-items:center;
+justify-content:center;
 text-align:center;
-background:radial-gradient(circle at top, #163a52, #0b1f2a);
+color:white;
+}
+
+.hero img{
+position:absolute;
+width:100%;
+height:100%;
+object-fit:cover;
+filter:brightness(0.45);
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+max-width:700px;
+padding:20px;
 }
 
 .hero h1{
-font-size:38px;
-font-weight:700;
+font-size:42px;
 margin-bottom:10px;
 }
 
 .hero p{
-max-width:600px;
-margin:auto;
-color:#bbb;
+color:#ddd;
 }
 
-/* BUTTON */
 .btn{
-background:linear-gradient(135deg,#ff7a00,#ff9500);
-padding:14px 30px;
-border-radius:8px;
+background:#ff7a00;
+padding:14px 28px;
+border-radius:6px;
 color:white;
 text-decoration:none;
 display:inline-block;
-margin-top:25px;
+margin-top:20px;
 font-weight:600;
-box-shadow:0 6px 20px rgba(255,140,0,0.4);
-}
-
-/* TRUST */
-.trust{
-display:flex;
-justify-content:center;
-gap:40px;
-padding:25px;
-color:#ccc;
-font-size:14px;
 }
 
 /* SECTION */
 .section{
-padding:80px 20px;
+padding:70px 20px;
 max-width:1100px;
 margin:auto;
 text-align:center;
 }
 
-/* GRID */
 .grid{
 display:grid;
 gap:25px;
 }
 
-/* CARD */
 .card{
-background:rgba(255,255,255,0.05);
+background:#ffffff;
 padding:30px;
-border-radius:14px;
-backdrop-filter:blur(12px);
-border:1px solid rgba(255,255,255,0.08);
+border-radius:12px;
+border:1px solid #eee;
 transition:0.3s;
 }
 
 .card:hover{
-transform:translateY(-8px);
-box-shadow:0 20px 40px rgba(0,0,0,0.3);
-}
-
-/* PROCESS */
-.process{
-background:rgba(255,255,255,0.02);
+transform:translateY(-5px);
+box-shadow:0 15px 40px rgba(0,0,0,0.08);
 }
 
 /* CTA */
 .cta{
-background:linear-gradient(135deg,#2d6a4f,#1b4332);
-padding:80px 20px;
+background:#0a3d62;
+color:white;
+padding:70px 20px;
 text-align:center;
-border-radius:20px;
-margin:40px;
+margin:40px 20px;
+border-radius:12px;
 }
 
 /* FOOTER */
 footer{
 text-align:center;
-padding:25px;
-color:#888;
+padding:20px;
+color:#666;
 }
 
 /* WHATSAPP */
@@ -139,25 +135,24 @@ border-radius:50px;
 text-decoration:none;
 font-weight:600;
 }
-
-/* RESPONSIVE */
-@media(min-width:768px){
-.grid-3{grid-template-columns:repeat(3,1fr);}
-}
 </style>
 </head>
 
 <body>
 
-<!-- NAV -->
+<!-- HERO -->
+<section class="hero">
+
+<img src="https://images.unsplash.com/photo-1564574685150-74a6c6f5f2c4">
+
 <nav>
 
 <div style="display:flex;align-items:center;gap:10px;">
 <img src="logo-text.png" style="height:45px;" onerror="this.style.display='none'">
 
-<div style="line-height:1;">
-<div style="font-weight:700;color:#ff4d4d;">AVISHKAR</div>
-<div style="font-size:12px;color:#52b788;letter-spacing:3px;">ENTERPRISES</div>
+<div>
+<div style="color:#ff4d4d;font-weight:700;">AVISHKAR</div>
+<div style="color:#52b788;font-size:12px;letter-spacing:3px;">ENTERPRISES</div>
 </div>
 </div>
 
@@ -170,30 +165,25 @@ font-weight:600;
 
 </nav>
 
-<!-- HERO -->
-<section class="hero">
+<div class="hero-content">
 <h1>Custom Clearance Without Delays</h1>
-<p>Professional logistics support near Nhava Sheva (JNPT). Fast, compliant, reliable.</p>
+<p>Reliable logistics support near Nhava Sheva (JNPT), Navi Mumbai</p>
 
 <a href="contact.html" class="btn">Get a Quote</a>
 
-<p style="margin-top:15px;font-size:14px;color:#888;">
+<p style="margin-top:15px;font-size:14px;color:#ccc;">
 Serving importers & exporters across Mumbai & Navi Mumbai
 </p>
-</section>
-
-<!-- TRUST -->
-<div class="trust">
-<div>✔ Fast Processing</div>
-<div>✔ Compliance Assured</div>
-<div>✔ Local Expertise</div>
 </div>
+
+</section>
 
 <!-- SERVICES -->
 <section class="section">
 <h2>Our Services</h2>
 
-<div class="grid grid-3">
+<div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(250px,1fr));">
+
 <div class="card">
 <h3>Import Clearance</h3>
 <p>Quick BOE filing & customs handling</p>
@@ -208,17 +198,20 @@ Serving importers & exporters across Mumbai & Navi Mumbai
 <h3>Freight Forwarding</h3>
 <p>End-to-end logistics management</p>
 </div>
+
 </div>
 </section>
 
 <!-- PROCESS -->
-<section class="section process">
+<section class="section" style="background:#f8fafc;">
 <h2>How It Works</h2>
 
-<div class="grid grid-3">
+<div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(250px,1fr));">
+
 <div class="card">1. Share shipment details</div>
 <div class="card">2. We handle documentation</div>
 <div class="card">3. Clearance & delivery</div>
+
 </div>
 </section>
 
