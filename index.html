@@ -16,7 +16,7 @@ background:linear-gradient(180deg,#f3f6fb,#e9eef5);
 color:#1a1a1a;
 }
 
-/* NAVBAR */
+/* NAV */
 nav{
 position:fixed;
 top:0;
@@ -30,20 +30,13 @@ box-shadow:0 4px 20px rgba(0,0,0,0.05);
 z-index:1000;
 }
 
-/* LOGO */
 .logo{
 display:flex;
 align-items:center;
 gap:8px;
 }
 
-.logo img{
-height:36px;
-}
-
-.logo-text{
-line-height:1;
-}
+.logo img{height:36px;}
 
 .logo-text .top{
 color:#ef4444;
@@ -57,7 +50,6 @@ font-size:11px;
 letter-spacing:1px;
 }
 
-/* NAV LINKS */
 .nav-links{
 display:flex;
 gap:12px;
@@ -70,7 +62,7 @@ color:#374151;
 font-size:14px;
 }
 
-/* FIX FOR CUT ISSUE */
+/* FIX SCROLL CUT */
 section{
 scroll-margin-top:90px;
 }
@@ -86,24 +78,8 @@ margin:auto;
 gap:30px;
 }
 
-.hero-text{
-flex:1;
-min-width:280px;
-}
-
-.hero-text h1{
-font-size:34px;
-margin-bottom:10px;
-}
-
-.hero-text p{
-color:#6b7280;
-}
-
-.hero-img{
-flex:1;
-min-width:280px;
-}
+.hero-text{flex:1;min-width:280px;}
+.hero-img{flex:1;min-width:280px;}
 
 .hero-img img{
 width:100%;
@@ -111,7 +87,6 @@ border-radius:12px;
 box-shadow:0 20px 50px rgba(0,0,0,0.1);
 }
 
-/* BUTTON */
 .btn{
 background:#2d6a4f;
 padding:12px 22px;
@@ -120,7 +95,6 @@ color:white;
 text-decoration:none;
 display:inline-block;
 margin-top:12px;
-font-weight:600;
 }
 
 /* SECTION */
@@ -131,7 +105,6 @@ margin:auto;
 text-align:center;
 }
 
-/* CARDS */
 .grid{
 display:grid;
 gap:20px;
@@ -144,21 +117,6 @@ padding:20px;
 border-radius:12px;
 border:1px solid #e5e7eb;
 box-shadow:0 8px 20px rgba(0,0,0,0.05);
-}
-
-/* STATS */
-.stats{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:20px;
-}
-
-.stat{
-background:white;
-padding:15px 20px;
-border-radius:10px;
-box-shadow:0 5px 15px rgba(0,0,0,0.05);
 }
 
 /* CTA */
@@ -185,7 +143,7 @@ padding:20px;
 color:#6b7280;
 }
 
-/* FLOAT BUTTONS */
+/* FLOAT */
 .whatsapp{
 position:fixed;
 bottom:20px;
@@ -212,7 +170,6 @@ text-decoration:none;
 
 <body>
 
-<!-- NAVBAR -->
 <nav>
 
 <div class="logo">
@@ -226,6 +183,7 @@ text-decoration:none;
 <div class="nav-links">
 <a href="#home">Home</a>
 <a href="#services">Services</a>
+<a href="#about">About</a>
 <a href="#contact">Contact</a>
 </div>
 
@@ -238,7 +196,7 @@ text-decoration:none;
 <h1>Fast & Reliable Custom Clearance — Without Delays</h1>
 
 <p>
-Avoid costly delays and compliance issues. We help importers & exporters clear shipments quickly and smoothly.
+We help importers & exporters clear shipments quickly with accurate documentation and strong customs network.
 </p>
 
 <a href="#contact" class="btn">Get a Quote</a><br>
@@ -253,18 +211,6 @@ class="btn" style="background:#25D366;">Chat on WhatsApp</a>
 
 </section>
 
-<!-- STATS -->
-<section class="section">
-<h2>Proven Track Record</h2>
-
-<div class="stats">
-<div class="stat"><strong>1000+</strong><br>Shipments</div>
-<div class="stat"><strong>Since 2019</strong></div>
-<div class="stat"><strong>Pan India</strong></div>
-<div class="stat"><strong>5 Hours</strong><br>Fastest</div>
-</div>
-</section>
-
 <!-- SERVICES -->
 <section id="services" class="section">
 <h2>Our Services</h2>
@@ -274,6 +220,16 @@ class="btn" style="background:#25D366;">Chat on WhatsApp</a>
 <div class="card">Export Clearance</div>
 <div class="card">Freight Forwarding</div>
 </div>
+</section>
+
+<!-- ABOUT (RESTORED) -->
+<section id="about" class="section">
+<h2>About Us</h2>
+
+<p style="max-width:700px;margin:auto;color:#6b7280;">
+Avishkar Enterprises has been providing custom clearance services since 2019, handling 1000+ shipments across India.
+We specialize in fruits & vegetables shipments and ensure fast, compliant and smooth clearance through strong industry network and accurate documentation.
+</p>
 </section>
 
 <!-- CTA -->
@@ -286,8 +242,6 @@ class="btn" style="background:#25D366;">Chat on WhatsApp</a>
 <!-- CONTACT -->
 <section id="contact" class="contact">
 <h2>Contact Us</h2>
-
-<p>Call or WhatsApp us for fast response</p>
 
 <p><strong>📞 Phone:</strong> <a href="tel:+919820499918">+91 9820499918</a></p>
 
@@ -302,7 +256,6 @@ Chat Now</a></p>
 © 2026 Avishkar Enterprises
 </footer>
 
-<!-- FLOAT -->
 <a href="https://wa.me/919820499918?text=Hi%20Avishkar%20Enterprise,%20I%20need%20custom%20clearance%20support." class="whatsapp">💬</a>
 <a href="tel:+919820499918" class="call">📞</a>
 
