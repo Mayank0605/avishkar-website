@@ -11,8 +11,6 @@ body{
 margin:0;
 font-family:Inter,sans-serif;
 color:#111;
-
-/* BACKGROUND */
 background:linear-gradient(135deg,#f8fafc,#e2e8f0);
 }
 
@@ -24,16 +22,14 @@ top:0;
 left:0;
 width:100%;
 height:100%;
-
 background:url('logo-text.png') center no-repeat;
 background-size:500px;
-
-opacity:0.04; /* VERY subtle */
-pointer-events:none;
+opacity:0.04;
 z-index:0;
+pointer-events:none;
 }
 
-/* NAV */
+/* NAVBAR */
 nav{
 position:fixed;
 top:0;
@@ -43,26 +39,38 @@ color:white;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:14px 20px;
+padding:10px 15px;
+flex-wrap:wrap;
 z-index:1000;
 }
 
-/* LOGO */
 .logo{
 display:flex;
 align-items:center;
-gap:10px;
+gap:8px;
+max-width:60%;
 }
 
 .logo img{
-height:38px;
-display:block;
+height:32px;
 }
 
-nav a{
+.logo span{
+font-size:13px;
+font-weight:600;
+white-space:nowrap;
+}
+
+.nav-links{
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+}
+
+.nav-links a{
 color:#cbd5f5;
 text-decoration:none;
-margin-left:15px;
+font-size:13px;
 }
 
 /* HERO */
@@ -98,7 +106,7 @@ display:inline-block;
 
 .btn.wa{background:#25D366}
 
-/* SECTIONS */
+/* SECTION */
 .section{
 padding:70px 20px;
 text-align:center;
@@ -149,10 +157,10 @@ z-index:1;
 <nav>
 <div class="logo">
 <img src="logo-text.png">
-<strong>AVISHKAR ENTERPRISES</strong>
+<span>AVISHKAR ENTERPRISES</span>
 </div>
 
-<div>
+<div class="nav-links">
 <a href="index.html">Home</a>
 <a href="services.html">Services</a>
 <a href="about.html">About</a>
