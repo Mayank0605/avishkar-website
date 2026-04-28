@@ -10,8 +10,29 @@
 body{
 margin:0;
 font-family:Inter,sans-serif;
-background:linear-gradient(135deg,#f8fafc,#e2e8f0);
 color:#111;
+
+/* BACKGROUND + WATERMARK */
+background:
+linear-gradient(135deg,#f8fafc,#e2e8f0),
+url('logo-text.png');
+
+background-repeat:no-repeat;
+background-position:center;
+background-size:500px;
+background-attachment:fixed;
+}
+
+/* WATERMARK SOFT OVERLAY */
+body::before{
+content:"";
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(255,255,255,0.9);
+z-index:-1;
 }
 
 /* NAV */
