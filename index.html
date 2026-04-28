@@ -4,7 +4,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Avishkar Enterprises</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
 body{
@@ -16,15 +16,12 @@ color:#1a1a1a;
 
 /* NAV */
 nav{
-position:absolute;
-top:0;
-width:100%;
+background:#0a3d62;
+color:white;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:20px;
-color:white;
-z-index:10;
+padding:14px 20px;
 }
 
 nav a{
@@ -36,39 +33,40 @@ font-weight:500;
 
 /* HERO */
 .hero{
-position:relative;
-height:90vh;
 display:flex;
+flex-wrap:wrap;
 align-items:center;
-justify-content:center;
-text-align:center;
-color:white;
+padding:60px 20px;
+max-width:1200px;
+margin:auto;
 }
 
-.hero img{
-position:absolute;
-width:100%;
-height:100%;
-object-fit:cover;
-filter:brightness(0.45);
+.hero-text{
+flex:1;
+min-width:300px;
 }
 
-.hero-content{
-position:relative;
-z-index:2;
-max-width:700px;
-padding:20px;
-}
-
-.hero h1{
-font-size:42px;
+.hero-text h1{
+font-size:38px;
 margin-bottom:10px;
 }
 
-.hero p{
-color:#ddd;
+.hero-text p{
+color:#555;
+max-width:500px;
 }
 
+.hero-img{
+flex:1;
+min-width:300px;
+}
+
+.hero-img img{
+width:100%;
+border-radius:10px;
+}
+
+/* BUTTON */
 .btn{
 background:#ff7a00;
 padding:14px 28px;
@@ -82,7 +80,7 @@ font-weight:600;
 
 /* SECTION */
 .section{
-padding:70px 20px;
+padding:60px 20px;
 max-width:1100px;
 margin:auto;
 text-align:center;
@@ -90,37 +88,36 @@ text-align:center;
 
 .grid{
 display:grid;
-gap:25px;
+gap:20px;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 }
 
 .card{
-background:#ffffff;
-padding:30px;
-border-radius:12px;
+background:white;
+padding:25px;
+border-radius:10px;
 border:1px solid #eee;
 transition:0.3s;
 }
 
 .card:hover{
 transform:translateY(-5px);
-box-shadow:0 15px 40px rgba(0,0,0,0.08);
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
 }
 
 /* CTA */
 .cta{
 background:#0a3d62;
 color:white;
-padding:70px 20px;
+padding:60px 20px;
 text-align:center;
-margin:40px 20px;
-border-radius:12px;
 }
 
 /* FOOTER */
 footer{
 text-align:center;
 padding:20px;
-color:#666;
+background:#f5f5f5;
 }
 
 /* WHATSAPP */
@@ -140,19 +137,13 @@ font-weight:600;
 
 <body>
 
-<!-- HERO -->
-<section class="hero">
-
-<img src="https://images.unsplash.com/photo-1564574685150-74a6c6f5f2c4">
-
+<!-- NAV -->
 <nav>
-
 <div style="display:flex;align-items:center;gap:10px;">
-<img src="logo-text.png" style="height:45px;" onerror="this.style.display='none'">
-
+<img src="logo-text.png" style="height:40px;" onerror="this.style.display='none'">
 <div>
-<div style="color:#ff4d4d;font-weight:700;">AVISHKAR</div>
-<div style="color:#52b788;font-size:12px;letter-spacing:3px;">ENTERPRISES</div>
+<div style="font-weight:700;color:#ff4d4d;">AVISHKAR</div>
+<div style="font-size:12px;color:#52b788;">ENTERPRISES</div>
 </div>
 </div>
 
@@ -162,18 +153,20 @@ font-weight:600;
 <a href="about.html">About</a>
 <a href="contact.html">Contact</a>
 </div>
-
 </nav>
 
-<div class="hero-content">
-<h1>Custom Clearance Without Delays</h1>
-<p>Reliable logistics support near Nhava Sheva (JNPT), Navi Mumbai</p>
+<!-- HERO -->
+<section class="hero">
+
+<div class="hero-text">
+<h1>Reliable Custom Clearance Services</h1>
+<p>Serving importers & exporters near Nhava Sheva (JNPT), Navi Mumbai with fast and compliant logistics solutions.</p>
 
 <a href="contact.html" class="btn">Get a Quote</a>
+</div>
 
-<p style="margin-top:15px;font-size:14px;color:#ccc;">
-Serving importers & exporters across Mumbai & Navi Mumbai
-</p>
+<div class="hero-img">
+<img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d">
 </div>
 
 </section>
@@ -182,36 +175,32 @@ Serving importers & exporters across Mumbai & Navi Mumbai
 <section class="section">
 <h2>Our Services</h2>
 
-<div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(250px,1fr));">
-
+<div class="grid">
 <div class="card">
 <h3>Import Clearance</h3>
-<p>Quick BOE filing & customs handling</p>
+<p>Fast BOE filing and customs approvals</p>
 </div>
 
 <div class="card">
 <h3>Export Clearance</h3>
-<p>Seamless export documentation</p>
+<p>Smooth documentation & shipment handling</p>
 </div>
 
 <div class="card">
 <h3>Freight Forwarding</h3>
-<p>End-to-end logistics management</p>
+<p>Complete logistics coordination</p>
 </div>
-
 </div>
 </section>
 
 <!-- PROCESS -->
-<section class="section" style="background:#f8fafc;">
+<section class="section" style="background:#f9fafb;">
 <h2>How It Works</h2>
 
-<div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(250px,1fr));">
-
+<div class="grid">
 <div class="card">1. Share shipment details</div>
 <div class="card">2. We handle documentation</div>
 <div class="card">3. Clearance & delivery</div>
-
 </div>
 </section>
 
