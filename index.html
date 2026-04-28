@@ -2,38 +2,52 @@
 <html lang="en">
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Avishkar Enterprise</title>
+<title>Avishkar Enterprises</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-body{margin:0;font-family:Inter,sans-serif;color:#1a1a1a;line-height:1.6;background:#ffffff;}
+body{margin:0;font-family:Inter,sans-serif;color:#1a1a1a;background:#fff;}
 
-/* NAV */
+/* NAVBAR */
 nav{
-position:sticky;top:0;
-background:white;
+position:sticky;
+top:0;
+background:#ffffff;
 display:flex;
 justify-content:space-between;
-padding:16px 20px;
+align-items:center;
+padding:14px 20px;
 box-shadow:0 2px 10px rgba(0,0,0,0.05);
 z-index:1000;
 }
+
+.logo img{
+height:45px;
+}
+
 nav a{
 text-decoration:none;
 color:#333;
-margin-left:15px;
+margin-left:18px;
 font-weight:500;
 }
 
 /* HERO */
 .hero{
-padding:90px 20px;
+padding:100px 20px;
+text-align:center;
 background:linear-gradient(135deg,#0a3d62,#1e5a7a);
 color:white;
-text-align:center;
 }
-.hero h1{font-size:32px;margin-bottom:10px;}
-.hero p{opacity:0.9;font-size:16px;}
+
+.hero h1{
+font-size:30px;
+margin-bottom:10px;
+}
+
+.hero p{
+opacity:0.9;
+}
 
 .btn{
 background:#ff7a00;
@@ -53,36 +67,26 @@ justify-content:space-around;
 padding:25px;
 background:#f5f7fa;
 font-size:14px;
+text-align:center;
 }
 
-/* SECTION */
+/* SECTIONS */
 .section{
 padding:60px 20px;
 max-width:1000px;
 margin:auto;
 }
 
-/* GRID */
 .grid{
 display:grid;
 gap:20px;
 }
 
-/* CARDS */
 .card{
 background:white;
 padding:25px;
 border-radius:12px;
 box-shadow:0 8px 25px rgba(0,0,0,0.06);
-transition:0.3s;
-}
-.card:hover{
-transform:translateY(-6px);
-}
-
-/* PROCESS */
-.process{
-background:#f8fafc;
 }
 
 /* CTA */
@@ -126,7 +130,10 @@ box-shadow:0 6px 20px rgba(0,0,0,0.2);
 
 <!-- NAV -->
 <nav>
-<div><strong>Avishkar Enterprise</strong></div>
+<div class="logo">
+<img src="logo-text.png" alt="Avishkar Enterprises">
+</div>
+
 <div>
 <a href="index.html">Home</a>
 <a href="services.html">Services</a>
@@ -172,25 +179,13 @@ box-shadow:0 6px 20px rgba(0,0,0,0.2);
 </section>
 
 <!-- PROCESS -->
-<section class="section process">
+<section class="section" style="background:#f8fafc;">
 <h2 style="text-align:center;margin-bottom:30px;">How It Works</h2>
 
 <div class="grid grid-3">
 <div class="card">1. Share shipment details</div>
 <div class="card">2. We handle documentation</div>
 <div class="card">3. Clearance & delivery</div>
-</div>
-</section>
-
-<!-- WHY US -->
-<section class="section">
-<h2 style="text-align:center;margin-bottom:30px;">Why Clients Choose Us</h2>
-
-<div class="grid grid-2">
-<div class="card">✔ Experienced handling of customs procedures</div>
-<div class="card">✔ Reduced delays & faster turnaround</div>
-<div class="card">✔ Transparent communication</div>
-<div class="card">✔ Cost-effective solutions</div>
 </div>
 </section>
 
@@ -203,7 +198,7 @@ box-shadow:0 6px 20px rgba(0,0,0,0.2);
 
 <!-- FOOTER -->
 <footer>
-© 2026 Avishkar Enterprise | Navi Mumbai
+© 2026 Avishkar Enterprises | Navi Mumbai
 </footer>
 
 <!-- WHATSAPP -->
