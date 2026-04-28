@@ -3,21 +3,101 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Avishkar Enterprises</title>
+
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
-body{margin:0;font-family:Inter;background:#f4f7fb;color:#111}
-nav{position:fixed;top:0;width:100%;background:#fff;padding:14px 20px;display:flex;justify-content:space-between;align-items:center;box-shadow:0 4px 20px rgba(0,0,0,0.05)}
-nav a{text-decoration:none;margin-left:15px;color:#333}
-.hero{padding:120px 20px 60px;display:flex;flex-wrap:wrap;max-width:1200px;margin:auto}
-.hero-text{flex:1;min-width:280px}
-.hero-img{flex:1}
-.hero-img img{width:100%;border-radius:12px}
-.btn{background:#2d6a4f;color:#fff;padding:12px 22px;border-radius:8px;text-decoration:none;display:inline-block;margin-top:10px}
-.section{padding:60px 20px;text-align:center}
-.grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
-.card{background:#fff;padding:20px;border-radius:10px;box-shadow:0 5px 15px rgba(0,0,0,0.05)}
-footer{text-align:center;padding:20px;color:#666}
+body{
+margin:0;
+font-family:Inter,sans-serif;
+background:#eef2f7;
+color:#111;
+}
+
+/* NAV */
+nav{
+position:fixed;
+top:0;
+width:100%;
+background:white;
+display:flex;
+justify-content:space-between;
+padding:15px 20px;
+box-shadow:0 2px 10px rgba(0,0,0,0.05);
+z-index:1000;
+}
+
+nav a{
+margin-left:15px;
+text-decoration:none;
+color:#333;
+}
+
+/* HERO */
+.hero{
+padding:120px 20px 60px;
+display:flex;
+flex-wrap:wrap;
+max-width:1200px;
+margin:auto;
+gap:30px;
+}
+
+.hero-text{flex:1;min-width:280px;}
+.hero-img{flex:1;}
+
+.hero-img img{
+width:100%;
+border-radius:12px;
+}
+
+.btn{
+background:#2d6a4f;
+color:white;
+padding:12px 22px;
+border-radius:8px;
+text-decoration:none;
+display:inline-block;
+margin-top:10px;
+}
+
+/* SECTION */
+.section{
+padding:60px 20px;
+text-align:center;
+max-width:1100px;
+margin:auto;
+}
+
+.grid{
+display:grid;
+gap:20px;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:12px;
+box-shadow:0 5px 20px rgba(0,0,0,0.05);
+}
+
+/* DARK CTA */
+.cta{
+background:#2d6a4f;
+color:white;
+padding:60px 20px;
+margin:40px 20px;
+border-radius:12px;
+text-align:center;
+}
+
+/* FOOTER */
+footer{
+text-align:center;
+padding:20px;
+color:#666;
+}
 </style>
 </head>
 
@@ -33,27 +113,78 @@ footer{text-align:center;padding:20px;color:#666}
 </div>
 </nav>
 
+<!-- HERO -->
 <section class="hero">
 <div class="hero-text">
-<h1>Fast & Reliable Custom Clearance</h1>
-<p>1000+ shipments cleared since 2019 across India.</p>
+<h1>Fast & Reliable Custom Clearance — Without Delays</h1>
+<p>Handling 1000+ shipments since 2019 across India.</p>
+
 <a href="contact.html" class="btn">Get Quote</a>
+<a href="https://wa.me/919820499918?text=Hi%20I%20need%20custom%20clearance" 
+class="btn" style="background:#25D366;">WhatsApp</a>
 </div>
+
 <div class="hero-img">
 <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d">
 </div>
 </section>
 
+<!-- TRUST -->
 <section class="section">
-<h2>Our Services</h2>
+<h2>Why Clients Choose Us</h2>
+
 <div class="grid">
-<div class="card">Import Clearance</div>
-<div class="card">Export Clearance</div>
-<div class="card">Freight Forwarding</div>
+<div class="card">⚡ Fast clearance through strong network</div>
+<div class="card">📄 Accurate documentation (no errors)</div>
+<div class="card">🌐 Pan India handling</div>
+<div class="card">🕒 Clearance done in as fast as 5 hours</div>
 </div>
 </section>
 
-<footer>© 2026 Avishkar Enterprises</footer>
+<!-- SERVICES -->
+<section class="section">
+<h2>Our Services</h2>
+
+<div class="grid">
+<div class="card"><strong>Import Clearance</strong><br>Fast BOE filing</div>
+<div class="card"><strong>Export Clearance</strong><br>Smooth documentation</div>
+<div class="card"><strong>Freight Forwarding</strong><br>End-to-end logistics</div>
+</div>
+</section>
+
+<!-- INDUSTRIES -->
+<section class="section">
+<h2>Industries We Serve</h2>
+
+<div class="grid">
+<div class="card">Fruits & Vegetables (Specialization)</div>
+<div class="card">FMCG</div>
+<div class="card">Electronics</div>
+<div class="card">Machinery</div>
+</div>
+</section>
+
+<!-- TESTIMONIAL -->
+<section class="section">
+<h2>What Clients Say</h2>
+
+<div class="grid">
+<div class="card">“Very fast clearance and saved us delay charges.”</div>
+<div class="card">“Reliable and professional service every time.”</div>
+</div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+<h2>Need Fast Clearance?</h2>
+<p>Call or WhatsApp now for immediate support</p>
+
+<a href="contact.html" class="btn" style="background:white;color:#2d6a4f;">Contact Now</a>
+</section>
+
+<footer>
+© 2026 Avishkar Enterprises
+</footer>
 
 </body>
 </html>
