@@ -4,91 +4,185 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Avishkar Enterprises</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
-body{margin:0;font-family:Inter,sans-serif;background:#0b1117;color:#fff}
+body{
+margin:0;
+font-family:Inter,sans-serif;
+background:linear-gradient(180deg,#f3f6fb,#e9eef5);
+color:#1a1a1a;
+}
 
 /* NAV */
 nav{
-position:fixed;top:0;width:100%;
-display:flex;justify-content:space-between;align-items:center;
-padding:16px 30px;
-background:rgba(15,23,42,0.7);
-backdrop-filter:blur(10px);
+position:fixed;
+top:0;
+width:100%;
+background:white;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:14px 20px;
+box-shadow:0 4px 20px rgba(0,0,0,0.05);
 z-index:1000;
 }
-nav a{color:#e2e8f0;text-decoration:none;margin-left:20px}
+
+nav a{
+color:#374151;
+text-decoration:none;
+margin-left:18px;
+font-weight:500;
+}
 
 /* HERO */
 .hero{
-height:100vh;display:flex;align-items:center;justify-content:center;
-text-align:center;position:relative;
+display:flex;
+flex-wrap:wrap;
+align-items:center;
+padding:100px 20px 60px;
+max-width:1200px;
+margin:auto;
 }
-.hero img{
-position:absolute;width:100%;height:100%;object-fit:cover;
-filter:brightness(0.4);
+
+.hero-text{
+flex:1;
+min-width:300px;
 }
-.hero-content{position:relative;z-index:2;max-width:700px}
-.hero h1{font-size:42px}
-.hero p{color:#cbd5e1}
+
+.hero-text h1{
+font-size:40px;
+margin-bottom:10px;
+color:#111827;
+}
+
+.hero-text p{
+color:#6b7280;
+max-width:500px;
+}
+
+.hero-img{
+flex:1;
+min-width:300px;
+}
+
+.hero-img img{
+width:100%;
+border-radius:12px;
+box-shadow:0 20px 50px rgba(0,0,0,0.1);
+}
 
 /* BUTTON */
 .btn{
-background:linear-gradient(135deg,#ef4444,#2d6a4f);
-padding:14px 30px;border-radius:8px;
-color:white;text-decoration:none;display:inline-block;margin-top:20px;
+background:#2d6a4f;
+padding:14px 28px;
+border-radius:8px;
+color:white;
+text-decoration:none;
+display:inline-block;
+margin-top:20px;
+font-weight:600;
 }
 
 /* SECTION */
-.section{padding:80px 20px;max-width:1100px;margin:auto;text-align:center}
+.section{
+padding:60px 20px;
+max-width:1100px;
+margin:auto;
+text-align:center;
+}
 
-/* GRID */
-.grid{display:grid;gap:25px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.grid{
+display:grid;
+gap:25px;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+}
 
 /* CARD */
 .card{
-background:rgba(255,255,255,0.05);
-padding:30px;border-radius:15px;
-border:1px solid rgba(255,255,255,0.1);
+background:white;
+padding:25px;
+border-radius:14px;
+border:1px solid #e5e7eb;
+box-shadow:0 10px 30px rgba(0,0,0,0.05);
 }
 
 /* TESTIMONIAL */
 .testimonial{
-max-width:700px;margin:auto;font-style:italic;color:#cbd5e1;
+background:white;
+padding:25px;
+border-radius:12px;
+border:1px solid #e5e7eb;
+text-align:left;
 }
 
-/* CLIENT LOGOS */
-.clients img{
-height:40px;opacity:0.7;margin:10px;
+.testimonial p{
+color:#4b5563;
+font-style:italic;
+}
+
+.testimonial h4{
+margin-top:10px;
+font-size:14px;
+color:#111827;
+}
+
+/* TRUSTED BY */
+.trusted{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:15px;
+margin-top:20px;
+}
+
+.badge{
+padding:10px 15px;
+background:white;
+border-radius:8px;
+border:1px solid #ddd;
+font-size:14px;
 }
 
 /* CTA */
 .cta{
-margin:60px 20px;padding:60px 20px;
-border-radius:20px;background:linear-gradient(135deg,#1b4332,#081c15);
+background:linear-gradient(135deg,#2d6a4f,#40916c);
+color:white;
+padding:60px 20px;
+text-align:center;
+margin:40px 20px;
+border-radius:16px;
 }
 
 /* FOOTER */
-footer{text-align:center;padding:20px;color:#94a3b8}
+footer{
+text-align:center;
+padding:20px;
+color:#6b7280;
+}
 
 /* WHATSAPP */
 .whatsapp{
-position:fixed;bottom:20px;right:20px;
-background:#25D366;color:white;
-padding:14px 20px;border-radius:50px;text-decoration:none;
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:14px 20px;
+border-radius:50px;
+text-decoration:none;
+font-weight:600;
 }
 </style>
 </head>
 
 <body>
 
-<!-- NAV -->
 <nav>
 <div style="display:flex;align-items:center;gap:10px;">
-<img src="logo-text.png" style="height:40px;" onerror="this.style.display='none'">
+<img src="logo-text.png" style="height:40px;">
 <div>
-<div style="color:#ef4444;font-weight:700;">AVISHKAR</div>
+<div style="font-weight:700;color:#ef4444;">AVISHKAR</div>
 <div style="font-size:12px;color:#2d6a4f;">ENTERPRISES</div>
 </div>
 </div>
@@ -103,69 +197,77 @@ padding:14px 20px;border-radius:50px;text-decoration:none;
 
 <!-- HERO -->
 <section class="hero">
-<img src="https://images.unsplash.com/photo-1564574685150-74a6c6f5f2c4">
 
-<div class="hero-content">
-<h1>Custom Clearance Without Delays</h1>
-<p>Helping importers & exporters move cargo faster, smoother, and without compliance headaches.</p>
+<div class="hero-text">
+<h1>Reliable Custom Clearance Services</h1>
+<p>Helping importers & exporters move shipments faster with smooth documentation and compliance support.</p>
 
-<a href="contact.html" class="btn">Get a Quote</a>
-<br>
-<a href="https://wa.me/919820499918" class="btn" style="background:#25D366;margin-top:10px;">Chat on WhatsApp</a>
+<a href="contact.html" class="btn">Get a Quote</a><br>
+<a href="https://wa.me/919820499918" class="btn" style="background:#25D366;">Chat on WhatsApp</a>
 </div>
+
+<div class="hero-img">
+<img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d">
+</div>
+
 </section>
 
 <!-- SERVICES -->
 <section class="section">
-<h2>What We Handle</h2>
+<h2>Our Services</h2>
 
 <div class="grid">
 <div class="card">
 <h3>Import Clearance</h3>
-<p>Fast processing of Bills of Entry with minimal delays.</p>
+<p>Efficient handling of Bills of Entry and customs approvals.</p>
 </div>
 
 <div class="card">
 <h3>Export Clearance</h3>
-<p>Smooth documentation and shipping coordination.</p>
+<p>Seamless shipping documentation and coordination.</p>
 </div>
 
 <div class="card">
 <h3>Freight Forwarding</h3>
-<p>End-to-end cargo movement via air & sea.</p>
+<p>End-to-end logistics via air and sea.</p>
 </div>
 </div>
 </section>
 
-<!-- WHY US -->
-<section class="section">
-<h2>Why Businesses Choose Us</h2>
-
-<div class="grid">
-<div class="card">✔ Faster clearance turnaround</div>
-<div class="card">✔ Strong compliance handling</div>
-<div class="card">✔ Clear communication</div>
-<div class="card">✔ Cost-effective solutions</div>
-</div>
-</section>
-
-<!-- TESTIMONIAL -->
-<section class="section">
-<h2>What Clients Say</h2>
-
-<p class="testimonial">
-“Avishkar Enterprise handled our shipments smoothly with zero delays. Highly dependable partner for imports.”
-</p>
-</section>
-
-<!-- CLIENT LOGOS -->
+<!-- TRUSTED BY -->
 <section class="section">
 <h2>Trusted By</h2>
 
-<div class="clients">
-<img src="https://dummyimage.com/120x40/ffffff/aaa&text=Client+1">
-<img src="https://dummyimage.com/120x40/ffffff/aaa&text=Client+2">
-<img src="https://dummyimage.com/120x40/ffffff/aaa&text=Client+3">
+<div class="trusted">
+<div class="badge">Manufacturers</div>
+<div class="badge">Importers</div>
+<div class="badge">Exporters</div>
+<div class="badge">Trading Companies</div>
+<div class="badge">Logistics Partners</div>
+</div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section">
+<h2>What Clients Say</h2>
+
+<div class="grid">
+
+<div class="testimonial">
+<p>“Very smooth clearance process. No delays and clear communication throughout.”</p>
+<h4>— Importer, Navi Mumbai</h4>
+</div>
+
+<div class="testimonial">
+<p>“Handled our export shipments professionally. Reliable and quick service.”</p>
+<h4>— Export Business Owner</h4>
+</div>
+
+<div class="testimonial">
+<p>“One of the most dependable clearance agents we’ve worked with.”</p>
+<h4>— Trading Company, Mumbai</h4>
+</div>
+
 </div>
 </section>
 
@@ -173,16 +275,13 @@ padding:14px 20px;border-radius:50px;text-decoration:none;
 <section class="cta">
 <h2>Need Fast Clearance?</h2>
 <p>Talk to us today and move your shipment without delays</p>
-
-<a href="contact.html" class="btn">Contact Now</a>
+<a href="contact.html" class="btn" style="background:white;color:#2d6a4f;">Contact Now</a>
 </section>
 
-<!-- FOOTER -->
 <footer>
 © 2026 Avishkar Enterprises
 </footer>
 
-<!-- WHATSAPP -->
 <a href="https://wa.me/919820499918" class="whatsapp">💬 Chat</a>
 
 </body>
