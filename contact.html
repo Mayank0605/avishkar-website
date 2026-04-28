@@ -16,12 +16,15 @@ color:#111;
 
 /* NAV */
 nav{
+position:sticky;
+top:0;
 background:white;
 padding:14px 20px;
 display:flex;
 justify-content:space-between;
 align-items:center;
 box-shadow:0 4px 20px rgba(0,0,0,0.05);
+z-index:1000;
 }
 
 nav a{
@@ -46,6 +49,7 @@ box-shadow:0 8px 25px rgba(0,0,0,0.05);
 margin-top:20px;
 }
 
+/* BUTTONS */
 .btn{
 display:inline-block;
 margin:10px;
@@ -59,25 +63,62 @@ font-weight:600;
 .call{background:#2563eb;}
 .wa{background:#25D366;}
 
+/* ADDRESS */
+.address{
+margin-top:20px;
+line-height:1.6;
+color:#374151;
+}
+
 /* MAP */
 .map{
-margin-top:20px;
+margin-top:25px;
 border-radius:12px;
 overflow:hidden;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
 }
 
 iframe{
 width:100%;
-height:300px;
+height:320px;
 border:0;
+}
+
+/* FLOAT BUTTONS */
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:14px 16px;
+border-radius:50%;
+text-decoration:none;
+font-size:18px;
+box-shadow:0 8px 20px rgba(0,0,0,0.2);
+}
+
+.call-float{
+position:fixed;
+bottom:80px;
+right:20px;
+background:#2563eb;
+color:white;
+padding:14px 16px;
+border-radius:50%;
+text-decoration:none;
+font-size:18px;
+box-shadow:0 8px 20px rgba(0,0,0,0.2);
 }
 </style>
 </head>
 
 <body>
 
+<!-- NAV -->
 <nav>
 <strong>AVISHKAR ENTERPRISES</strong>
+
 <div>
 <a href="index.html">Home</a>
 <a href="services.html">Services</a>
@@ -86,10 +127,11 @@ border:0;
 </div>
 </nav>
 
+<!-- CONTACT SECTION -->
 <section class="section">
 
 <h1>Contact Us</h1>
-<p>Call or WhatsApp us for fast custom clearance support</p>
+<p>Call or WhatsApp us for fast custom clearance assistance</p>
 
 <div class="box">
 
@@ -98,18 +140,29 @@ border:0;
 <a href="https://wa.me/919820499918?text=Hi%20Avishkar%20Enterprise,%20I%20need%20custom%20clearance%20support." 
 class="btn wa">💬 WhatsApp</a>
 
-<p><strong>Location:</strong> Navi Mumbai (Near JNPT)</p>
+<div class="address">
+<strong>Office Address:</strong><br>
+483, 4th Floor,<br>
+Central Facility Building 2,<br>
+Sector 19C, Vashi,<br>
+Navi Mumbai – 400703
+</div>
 
 </div>
 
-<!-- GOOGLE MAP -->
+<!-- MAP -->
 <div class="map">
 <iframe 
-src="https://maps.google.com/maps?q=JNPT%20Navi%20Mumbai&t=&z=13&ie=UTF8&iwloc=&output=embed">
+src="https://www.google.com/maps?q=483,%204th%20floor,%20Central%20Facility%20Building%202,%20Sector%2019C,%20Vashi,%20Navi%20Mumbai,%20Maharashtra%20400703&z=17&output=embed">
 </iframe>
 </div>
 
 </section>
+
+<!-- FLOAT BUTTONS -->
+<a href="https://wa.me/919820499918?text=Hi%20Avishkar%20Enterprise,%20I%20need%20custom%20clearance%20support." class="whatsapp">💬</a>
+
+<a href="tel:+919820499918" class="call-float">📞</a>
 
 </body>
 </html>
