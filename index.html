@@ -23,41 +23,27 @@ background:#ffffff;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:14px 16px;
+padding:10px 16px;
 box-shadow:0 4px 20px rgba(0,0,0,0.06);
 z-index:1000;
-overflow-x:auto;
 }
 
-/* BRAND (LOCKED) */
-.brand{
-display:flex;
-align-items:center;
-gap:10px;
-white-space:nowrap;
-}
-
+/* BRAND IMAGE */
 .brand img{
-height:32px;
-}
-
-.brand span{
-font-weight:700;
-font-size:14px;
-color:#111827; /* FIXED */
+height:40px;
+display:block;
 }
 
 /* MENU */
 .menu{
 display:flex;
-gap:14px;
-white-space:nowrap;
+gap:16px;
 }
 
 .menu a{
 text-decoration:none;
 color:#374151;
-font-size:13px;
+font-size:14px;
 }
 
 /* HERO */
@@ -68,6 +54,7 @@ margin:auto;
 display:flex;
 flex-wrap:wrap;
 gap:30px;
+align-items:center;
 }
 
 .hero-text{
@@ -76,7 +63,7 @@ min-width:280px;
 }
 
 .hero-text h1{
-font-size:30px;
+font-size:32px;
 margin-bottom:10px;
 }
 
@@ -131,10 +118,10 @@ box-shadow:0 6px 18px rgba(0,0,0,0.05);
 
 <body>
 
+<!-- NAV -->
 <nav>
 <div class="brand">
-<img src="logo-text.png">
-<span>AVISHKAR ENTERPRISES</span>
+<img src="brand-name.png" alt="Avishkar Enterprises">
 </div>
 
 <div class="menu">
@@ -145,11 +132,12 @@ box-shadow:0 6px 18px rgba(0,0,0,0.05);
 </div>
 </nav>
 
+<!-- HERO -->
 <section class="hero">
 
 <div class="hero-text">
 <h1>Fast & Reliable Custom Clearance</h1>
-<p>Handling shipments across India with speed and accuracy.</p>
+<p>Handling shipments across India with speed, accuracy and strong industry network.</p>
 
 <a href="contact.html" class="btn">Get Quote</a>
 </div>
@@ -160,6 +148,7 @@ box-shadow:0 6px 18px rgba(0,0,0,0.05);
 
 </section>
 
+<!-- SERVICES -->
 <section class="section">
 <h2>Our Services</h2>
 
